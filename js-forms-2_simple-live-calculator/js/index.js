@@ -13,8 +13,10 @@ secondInput.addEventListener("input", () => {
 });
 
 function multiplyValues() {
-  const num1 = Number.parseInt(firstInput.value);
-  const num2 = Number.parseInt(secondInput.value);
+  // const num1 = Number.parseInt(firstInput.value);
+  // const num2 = Number.parseInt(secondInput.value);
+  const num1 = firstInput.value;
+  const num2 = secondInput.value;
   const resultvalue = num1 * num2;
   result.textContent = resultvalue;
 }
