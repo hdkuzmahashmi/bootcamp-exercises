@@ -15,7 +15,9 @@ async function fetchData() {
     for (const a of arr) {
       if (a.name === "R2-D2") console.log("Eye color is: " + a.eye_color);
     }
-  } catch (error) {}
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 fetchData();
