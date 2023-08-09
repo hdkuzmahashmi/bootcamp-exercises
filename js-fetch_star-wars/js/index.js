@@ -34,8 +34,8 @@ const EXAMPLE_DATA = {
 };
 
 // Create dom element for a card and append it to the root
-const firstCard = Card(EXAMPLE_DATA);
-renderElement(firstCard);
+//const firstCard = Card(EXAMPLE_DATA);
+//renderElement(firstCard);
 
 fetchDataAndRender();
 
@@ -45,13 +45,14 @@ async function fetchDataAndRender() {
   try {
     const response = await fetch(url);
     if (!response.ok) console.error("Bad Request");
-    else console.log("work fine");
+    else console.log("works fine");
     const data = await response.json();
     console.log(data.results);
-    const dataobj = data.results;
-    dataobj.forEach((element) => {
-      const firstCard = Card(element);
-      if (element.name !== "Luke Skywalker") renderElement(firstCard);
+    const dataResult = data.results;
+    dataResult.forEach((dataResult) => {
+      const firstCard = Card(dataResult);
+      //if (dataResult.name !== "Luke Skywalker") renderElement(firstCard);
+      renderElement(firstCard);
     });
   } catch (error) {
     console.error(error);
